@@ -128,7 +128,7 @@ class Parser
     end
     
     while true do
-      _eat('"')?; _rewind(1); _parse_string(true)?; _skip_whitespace()
+      _eat('"')?; _rewind(); _parse_string(true)?; _skip_whitespace()
       _eat(':')?; _parse_data()?; _skip_whitespace()
       _pre_token(); _yield(TokenPairPost)?
       match _next()?
