@@ -13,12 +13,11 @@ class Parser
   new ref create() => None
   
   fun ref _set_defaults() =>
-    _offset            = 0
-    _offset_start      = 0
-    _abort             = false
-    capture_next_value = true
-    last_number        = I64(0)
-    last_string        = ""
+    _offset       = 0
+    _offset_start = 0
+    _abort        = false
+    last_number   = I64(0)
+    last_string   = ""
   
   fun ref parse(
     source': String box,
